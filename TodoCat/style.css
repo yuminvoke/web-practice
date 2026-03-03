@@ -1,0 +1,352 @@
+:root {
+    --background: #fffbe7;
+    --main: #845d2a;
+    --gray: #a8a7a7;
+    --white: #ffffff;
+    --surface: #ffffff;
+    --text: #50381d;
+    --text-muted: #9a855f;
+    --line: #e6d8bc;
+    --brand: #845d2a;
+    --brand-strong: #6f4d23;
+    --danger: #b85050;
+
+    --radius-sm: 12px;
+    --radius-md: 18px;
+    --radius-lg: 26px;
+    --max-width: 640px;
+}
+
+* {
+    box-sizing: border-box;
+}
+
+html,
+body {
+    height: 100%;
+}
+
+body {
+    margin: 0;
+    padding: 28px;
+    display: grid;
+    place-items: center;
+    background: var(--background);
+    color: var(--text);
+    font-family: Manrope, "Noto Sans KR", system-ui, -apple-system, Segoe UI, Roboto, sans-serif;
+}
+
+.app {
+    width: min(var(--max-width), 100%);
+    background: #fffefa;
+    border: 1px solid var(--white);
+    border-radius: var(--radius-lg);
+    padding: 26px;
+    box-shadow:
+        0 24px 48px rgba(15, 23, 42, 0.12),
+        0 1px 0 rgba(255, 255, 255, 0.65) inset;
+    backdrop-filter: blur(3px);
+}
+
+.header {
+    display: grid;
+}
+
+.title {
+    margin: 0;
+    text-align: center;
+    color: var(--text);
+    letter-spacing: 0.04em;
+    font-size: clamp(30px, 5vw, 42px);
+    font-weight: 800;
+}
+
+.input {
+    margin-top: 20px;
+}
+
+.input-form {
+    position: relative;
+}
+
+.input-bar {
+    width: 100%;
+    height: 56px;
+    padding: 0 66px 0 18px;
+    border: 1px solid var(--line);
+    border-radius: 999px;
+    background: var(--surface);
+    color: var(--text);
+    font-size: 17px;
+    font-weight: 500;
+    outline: none;
+    transition: border-color 0.2s ease, box-shadow 0.2s ease;
+}
+
+.input-bar::placeholder {
+    color: var(--text-muted);
+    font-size: 17px;
+}
+
+.input-bar:focus {
+    border-color: #c6a06a;
+    box-shadow: 0 0 0 4px rgba(132, 93, 42, 0.14);
+}
+
+.input-button {
+    position: absolute;
+    top: 50%;
+    right: 4px;
+    transform: translateY(-50%);
+    width: 48px;
+    height: 48px;
+    border: 0;
+    border-radius: 999px;
+    background: linear-gradient(155deg, var(--brand) 0%, var(--brand-strong) 100%);
+    color: #fff;
+    font-size: 28px;
+    line-height: 1;
+    cursor: pointer;
+    transition: transform 0.16s ease, filter 0.16s ease;
+}
+
+.input-button:hover {
+    filter: brightness(1.04);
+}
+
+.input-button:active {
+    transform: translateY(-50%) scale(0.96);
+}
+
+.actions {
+    margin-top: 14px;
+    display: grid;
+    grid-template-columns: 1fr auto;
+    gap: 12px;
+    align-items: center;
+}
+
+.clear-button {
+    height: 36px;
+    width: 80px;
+    border: 1px solid var(--line);
+    border-radius: 999px;
+    background: var(--surface);
+    color: var(--text);
+    font-size: 14px;
+    font-weight: 700;
+    cursor: pointer;
+    transition: transform 0.16s ease, border-color 0.16s ease;
+}
+
+.clear-button:hover {
+    border-color: #d3bc93;
+}
+
+.clear-button:active {
+    transform: scale(0.97);
+}
+
+.reward {
+    display: grid;
+    grid-template-columns: auto auto;
+    align-items: center;
+    gap: 10px;
+    justify-content: end;
+}
+
+.score,
+.current-score,
+.target-score {
+    margin: 0;
+    color: var(--text);
+    font-size: 18px;
+    font-weight: 700;
+}
+
+.reward-button {
+    height: 36px;
+    min-width: 148px;
+    padding: 0 14px;
+    border: 0;
+    border-radius: 999px;
+    font-size: 14px;
+    font-weight: 700;
+}
+
+.di-reward-button {
+    background: #c8c4be;
+    color: #f9f8f6;
+    cursor: default;
+}
+
+.en-reward-button {
+    background: linear-gradient(155deg, var(--brand) 0%, var(--brand-strong) 100%);
+    color: #ffffff;
+    cursor: pointer;
+    transition: filter 0.16s ease, transform 0.16s ease;
+}
+
+.en-reward-button:hover {
+    filter: brightness(1.05);
+}
+
+.en-reward-button:active {
+    transform: scale(0.98);
+}
+
+.list {
+    margin-top: 16px;
+    background: var(--surface);
+    border: 1px solid var(--line);
+    border-radius: var(--radius-md);
+    padding: 16px;
+    min-height: 48px;
+}
+
+.task-list {
+    margin: 0;
+    padding: 0;
+    list-style: none;
+    display: grid;
+    gap: 10px;
+}
+
+.task {
+    display: grid;
+    grid-template-columns: auto 1fr auto;
+    gap: 12px;
+    align-items: center;
+    padding: 10px 2px;
+    border-bottom: 1px solid var(--line);
+}
+
+.task:last-child {
+    border-bottom: 0;
+}
+
+.check-box {
+    width: 18px;
+    height: 18px;
+    accent-color: var(--brand);
+    cursor: pointer;
+}
+
+.task-title {
+    color: var(--text);
+    font-size: 17px;
+    font-weight: 500;
+    overflow-wrap: anywhere;
+}
+
+.delete-button {
+    width: 28px;
+    height: 28px;
+    border: 0;
+    border-radius: 999px;
+    background: #f5dfdf;
+    color: var(--danger);
+    font-size: 12px;
+    font-weight: 700;
+    cursor: pointer;
+    transition: filter 0.16s ease;
+}
+
+.delete-button:hover {
+    filter: brightness(0.97);
+}
+
+.empty-state {
+    min-height: 48px;
+    display: grid;
+    place-items: center;
+    text-align: center;
+    color: var(--text-muted);
+    font-size: 16px;
+    font-weight: 500;
+}
+
+.modal {
+    position: fixed;
+    inset: 0;
+    display: none;
+    place-items: center;
+    z-index: 1000;
+}
+
+.modal.is-open {
+    display: grid;
+}
+
+.modal-backdrop {
+    position: absolute;
+    inset: 0;
+    background: rgba(63, 45, 22, 0.46);
+    backdrop-filter: blur(2px);
+}
+
+.modal-panel {
+    position: relative;
+    width: min(560px, calc(100% - 28px));
+    padding: 14px;
+    border-radius: 22px;
+    background: var(--surface);
+    border: 1px solid var(--line);
+    box-shadow: 0 24px 48px rgba(15, 23, 42, 0.24);
+}
+
+.close-button {
+    position: absolute;
+    top: 10px;
+    right: 10px;
+    width: 32px;
+    height: 32px;
+    border: 0;
+    border-radius: 999px;
+    background: rgba(111, 77, 35, 0.92);
+    color: #fff;
+    font-size: 14px;
+    font-weight: 700;
+    cursor: pointer;
+}
+
+.cat-image {
+    width: 100%;
+    max-height: 70vh;
+    display: block;
+    object-fit: cover;
+    border-radius: 14px;
+}
+
+@media (max-width: 640px) {
+    body {
+        padding: 14px;
+    }
+
+    .app {
+        padding: 18px 14px;
+        border-radius: 20px;
+    }
+
+    .actions {
+        grid-template-columns: 1fr;
+        gap: 10px;
+    }
+
+    .clear-button {
+        width: 100%;
+    }
+
+    .reward {
+        width: 100%;
+        grid-template-columns: auto 1fr;
+    }
+
+    .reward-button {
+        width: 100%;
+    }
+
+    .task-title {
+        font-size: 16px;
+    }
+}

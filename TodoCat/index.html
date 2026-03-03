@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="ko">
+    <head>
+        <meta charset="utf-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1" />
+        <title>Todo Cat</title>
+        
+        <link rel="preconnect" href="https://fonts.googleapis.com">
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link href="https://fonts.googleapis.com/css2?family=Manrope:wght@500;700;800&family=Noto+Sans+KR:wght@400;500;700&display=swap" rel="stylesheet">
+
+        <link rel="stylesheet" href="style.css" />
+    </head>
+
+    <body>
+        <div class="app">
+            <header class="header">
+                <h1 class="title">TO-DO CAT</h1>
+            </header>
+
+            <section class="input">
+                <form class="input-form">
+                    <input class="input-bar" type="text" placeholder="할 일을 입력하세요">
+                    <button class="input-button" type="submit">+</button>
+                </form>
+            </section>
+
+            <section class="actions">
+                <button class="clear-button" type="button">Clear</button>
+
+                <div class="reward">
+                    <p class="score"><span class="current-score">0</span>/<span class="target-score">0</span></p>
+                    <button class="reward-button di-reward-button" id="rewardButton" type="button">Get Your Cat</button>
+                </div>
+            </section>
+
+
+            <section class="list">
+                <ul class="task-list">
+                </ul>
+            </section>
+
+        </div>
+
+        <div class="modal" id="rewardModal" role="dialog" aria-modal="true" aria-labelledby="rewardModalTitle" aria-hidden="true">
+            <div class="modal-backdrop" data-modal-close></div>
+            <div class="modal-panel">
+                <button class="close-button" type="button" aria-label="닫기" data-modal-close>X</button>
+                <img class="cat-image" src="./cats/8.jpg" alt="고양이 이미지" />
+            </div>
+        </div>
+
+        <script src="script.js"></script>
+    </body>
+</html>
