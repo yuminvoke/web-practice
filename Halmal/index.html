@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="ko">
+    <head>
+        <meta charset="utf-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1" />
+        <title>할래말래</title>
+
+        <link rel="stylesheet" href="style.css" />
+    </head>
+
+    <body>
+        <div class="app">
+            <header class="header">
+                <h1 class="title"><span class="highlight">할</span>래<span class="highlight">말</span>래</h1>
+            </header>
+
+            <section class="topic">
+                <p class="instruction">어떤 선택을 대신 해 드릴까요?</p>
+                <input class="input-bar" type="text" placeholder="양자택일이 가능해야 좋아요" />
+                <button id="topic-button" class="input-button" type="button">↵</button>
+            </section>
+
+            <section class="option">
+                <p class="instruction">고민 중인 선택지 두 개를 알려주세요</p>
+                <input class="input-bar" type="text" placeholder="선택지 1" />
+                <input class="input-bar" type="text" placeholder="선택지 2" />
+                <button id="option-button" class="input-button" type="button">↵</button>
+            </section>
+
+            <section class="weight">
+                <p class="instruction">지금 어떤 선택지가 더 끌리시나요?</p>
+                <div class="slider">
+                    <p class="this">이쪽</p>
+                    <input class="range-bar" type="range" min="1" max="10" value="5"/>
+                    <p class="this">이쪽</p>
+                </div>
+            </section>
+
+            <section class="submit">
+                <button class="submit-button" type="button">결과</button>
+            </section>
+
+            <section class="loading">
+                <p class="loading-comment">저의 선택은...</p>
+            </section>
+
+            <section class="result">
+            </section>
+        </div>
+    </body>
+</html>
