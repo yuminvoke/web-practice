@@ -6,6 +6,7 @@ class CreateTaskReqeust(BaseModel):
     done: bool = False
 
 class UpdateTaskReqeust(BaseModel):
+    content: str | None = None
     done: bool
 
 class TaskResponse(BaseModel):
