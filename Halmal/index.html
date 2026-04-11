@@ -18,24 +18,24 @@
                 <p class="instruction">어떤 선택을 대신 해 드릴까요?</p>
                 <form class="input-form" id="topic-form">
                     <input class="input-bar" id="topic-bar" type="text" placeholder="양자택일이 가능해야 좋아요" />
-                    <button class="input-button" id="topic-button" type="button">↵</button>
+                    <button class="input-button" id="topic-button" type="submit">↵</button>
                 </form>
             </section>
 
             <section class="option">
-                <p class="instruction">고민 중인 선택지 두 개를 알려주세요</p>
-                <form class="input-form" id="option1-form">
+                <p class="instruction hidden">고민 중인 선택지 두 개를 알려주세요</p>
+                <form class="input-form hidden" id="option1-form">
                     <input class="input-bar" id="option1-bar" type="text" placeholder="선택지 1" />
-                    <button class="input-button" id="option1-button" type="button">↵</button>
+                    <button class="input-button" id="option1-button" type="submit">↵</button>
                 </form>
-                <form class="input-form" id="option2-form">
+                <form class="input-form hidden" id="option2-form">
                     <input class="input-bar" id="option2-bar" type="text" placeholder="선택지 2" />
-                    <button class="input-button" id="option2-button" type="button">↵</button>
+                    <button class="input-button" id="option2-button" type="submit">↵</button>
                 </form>
             </section>
                 
 
-            <section class="weight">
+            <section class="range hidden">
                 <p class="instruction">지금 어떤 선택지가 더 끌리시나요?</p>
                 <form class="range-form" id="range-form">
                     <p class="this">이쪽</p>
@@ -44,15 +44,15 @@
                 </form>
             </section>
 
-            <section class="submit">
-                <button class="submit-button" type="button">결과</button>
+            <section class="submit hidden">
+                <button class="submit-button" type="submit">결과</button>
             </section>
 
-            <section class="loading">
+            <section class="loading hidden">
                 <!-- <p class="loading-comment">저의 선택은...</p> -->
             </section>
 
-            <section class="result">
+            <section class="result hidden">
             </section>
         </div>
 
