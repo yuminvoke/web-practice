@@ -115,7 +115,6 @@ submitButton.addEventListener('click', () => {
     window.setTimeout(() => {
         submitButton.classList.remove('is-loading');
         submitButton.textContent = selectResult();
-        submitButton.disabled = false;
         showElement(retryButton);
     }, 1200);
 });
